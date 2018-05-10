@@ -1,0 +1,33 @@
+.upper {
+    height: 430px;
+}
+
+.blue-bg{
+    background-color: #7884CD;
+}
+
+.darkblue-bg {
+    background-color: #2F3BA1;
+}
+
+.color-white {
+    color: whitesmoke;
+}
+
+.inner {
+    width: 65%;
+}
+
+.footer {
+    width: 80%;
+    height: 235px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img.icon {
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+}

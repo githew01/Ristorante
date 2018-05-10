@@ -1,0 +1,50 @@
+<div class="container">
+  <div *ngFor="let item of items; let i = index">
+    <div *ngIf="i % 2 == 0" class="row rowtop">
+      <div class="col-sm-9">
+        <h2>{{item.name}} </h2>
+        <h4 *ngIf="item.title">{{item.title}}</h4>
+        <p>{{item.desp}}</p>
+        <p>
+          <a href="#">More »</a>
+        </p>
+      </div>
+      <div class="col-sm-3 celltop">
+        <h4 class="align-middle text-center">{{item.highLight}}</h4>
+      </div>
+    </div>
+
+    <div *ngIf="i % 2 == 1" class="row rowtop">
+      <div class="col-sm-3 celltop">
+        <h4 class="align-middle text-center">{{item.highLight}}</h4>
+      </div>
+      <div class="col-sm-9">
+        <h2>{{item.name}} &nbsp;
+          <img *ngIf="item.isNew" src="assets\new-sign.jpg" height="42" width="42" />
+        </h2>
+        <h4 *ngIf="item.title">{{item.title}}</h4>
+        <p>{{item.desp}}</p>
+        <p>
+          <a href="#">More »</a>
+        </p>
+      </div>
+    </div>
+    <hr *ngIf="i < items.length - 1">
+  </div>
+  <!-- menu starts here -->
+  <div class="alert alert-secondary">
+    <h1>Menu</h1>
+  </div>
+  <div *ngFor="let menu of menus; let i = index">
+    <div class="row menurow" [ngClass]="{'alert-warning' : i % 2 == 1, 'alert-primary' : i % 2 == 0}">
+      <div class="col col-sm-8">
+        <strong>{{menu.name}} &nbsp;
+          <img *ngIf="menu.isNew" src="assets\new-sign.jpg" height="25" width="25" />
+        </strong>
+      </div>
+      <div class="col col-sm-2 text-right">
+        <strong>{{menu.price}}</strong>
+      </div>
+    </div>
+  </div>
+</div>

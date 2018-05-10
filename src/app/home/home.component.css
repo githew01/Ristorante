@@ -1,0 +1,13 @@
+.rowtop {
+    margin: 20px 20px 0 20px
+}
+
+.celltop {
+    margin-top: 40px
+}
+
+.menurow {
+    margin: 0;
+    height: 50px;
+    padding-top: 12px;
+}
